@@ -100,7 +100,7 @@ pub fn enable_firewall_rule() -> Result<bool> {
             "new",
             "enable=YES",
         ])
-        .stdout(Stdio::null())
+        // .stdout(Stdio::null())
         .spawn()?;
     let rc = handle.wait()?;
     Ok(rc.success())
@@ -117,7 +117,7 @@ pub fn disable_firewall_rule() -> Result<bool> {
             "new",
             "enable=NO",
         ])
-        .stdout(Stdio::null())
+        // .stdout(Stdio::null())
         .spawn()?;
     let rc = handle.wait()?;
     Ok(rc.success())
