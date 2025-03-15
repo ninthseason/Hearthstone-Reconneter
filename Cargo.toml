@@ -13,3 +13,7 @@ features = [
     "Win32_UI_Input_KeyboardAndMouse",
     "Win32_UI_WindowsAndMessaging"
 ]
+
+[profile.release]
+lto = true
+strip = "symbols"
